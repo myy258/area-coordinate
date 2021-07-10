@@ -8,11 +8,11 @@
 # 2 核心代码
 将N个坐标点连接形成一个区域，这里我是判断一个坐标点是否在该区域内。
 
+```python
 def rayCasting(p, poly):
     px = p['lng']
     py = p['lat']
-    flag = False
- 
+    flag = False 
     i = 0
     l = len(poly)
     j = l - 1
@@ -72,7 +72,8 @@ def find_community(data):
         contents = txt_file.read()
         shijiedata = json.loads(contents)       
     return rs(coordinate, shijiedata, data)
-    
+'''
+
 # 2 坐标获取
 对于坐标获取可以使用高德的API，https://restapi.amap.com/v3/place/text?parameters
 
