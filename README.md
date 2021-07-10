@@ -72,7 +72,7 @@ def find_community(data):
         contents = txt_file.read()
         shijiedata = json.loads(contents)       
     return rs(coordinate, shijiedata, data)
-'''
+```
 
 # 2 坐标获取
 对于坐标获取可以使用高德的API，https://restapi.amap.com/v3/place/text?parameters
