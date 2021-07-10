@@ -75,5 +75,17 @@ def find_community(data):
 ```
 
 # 3 坐标获取
-对于坐标获取可以使用高德的API，https://restapi.amap.com/v3/place/text?parameters
+对于坐标获取可以使用高德的API，https://lbs.amap.com/
 
+示例：
+```python
+def getlnglat(address):  
+    key='99999999999999999999999999'
+    url='https://restapi.amap.com/v3/place/text?parameters'
+    params = {'key':key,
+          'keywords':address,
+          'city':'广州'}
+    res = requests.get(url, params)
+    json_data = json.loads(res.text)
+    return json_data
+```
